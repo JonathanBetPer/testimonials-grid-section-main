@@ -18,50 +18,106 @@
     --gris2: hsl(210, 46%, 95%);
 
 }
-
-*{
-    color: var(--blanco);
-    font-size: 1rem;
-    font-family: 'Barlow Semi Condensed', sans-serif;
-}
-
-.contenedor {
-    display: grid;
-    grid-column: auto;
-
-}
-
-.carta  {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    border-radius: 1rem;
-    gap: 2rem;
-}
-
-.daniel {
-    background-color: var(--morado);
-
-}
-
-.comillas-bg{
-    background-image: url(./images/bg-pattern-quotation.svg);
-    position: relative;
-    background-repeat: no-repeat;
-    height: 8rem;
-    width: 8rem;
-    z-index: 1;
-}
-
-.user  {
-    display: flex;
-    flex-direction: row;
+body{
+    background-color: var(--gris-claro);
+    }
+    *{
+        font-size: 1rem;
+        font-family: 'Barlow Semi Condensed', sans-serif;
+    }
     
+    .contenedor {
+        display: flex;
+        flex-direction: column;
+        margin: 3rem;
+        gap: 2rem;
+        grid-row: 5;
+        grid-column: span 2;
+    }
+    
+    .carta  {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        border-radius: 0.5rem;
+        gap: 1rem;
+        padding: 3rem;
+        align-items: baseline;
+    }
+    
+    .daniel {
+        background-image: url(./images/bg-pattern-quotation.svg);
+        
+        background-repeat: no-repeat;
+        background-position: top right 10%;
+        background-size: 100px;
+        background-color: var(--morado);
 
-}
+        color: var(--blanco);
+        grid-area: daniel;
+        
+    
+    }
+    
+    .jonathan {
+        background-color: var(--azul-grisaseo);
+        grid-column: span 0.5;
 
+        color: var(--blanco);
+        grid-area: jonathan;
+    }
+    
+    .kira {
+        background-color: var(--blanco);
+        grid-column: span 0.5;   
+        color: var(--azul-grisaseo);
 
+        grid-area: kira;
+    }
+    
+    .jeanette {
+        background-color: var(--blanco);
+        grid-column: span 0.5;   
+        color: var(--azul-grisaseo);
+
+        grid-area: jeanette;
+        
+    }
+    
+    .patrick {
+        background-color: var(--azul-negro);
+        grid-column: span 0.5;   
+        color: var(--blanco);
+
+        grid-area: patrick;
+      
+    }
+    .nombre{
+        justify-content: center;
+        align-items: center;
+        align-self: center;
+        padding-left: 1rem;
+    }
+    
+    .user  {
+        display: flex;
+        flex-direction: row;
+    }
+    
+    img {
+        border-radius: 3rem;
+        padding: 2px;
+    
+    }
+    
+    .imagen {
+        background-color: var(--azul-grisaseo);
+        border-radius: 3rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
 
 /*Footer*/
 .attribution { 
@@ -71,5 +127,134 @@
     color: hsl(228, 45%, 44%); 
 }
 
-@media (min-width: 375px){
+@media (min-width: 1440px){
+    body{
+        background-color: var(--gris-claro);
+        }
+        *{
+            font-size: 1rem;
+            font-family: 'Barlow Semi Condensed', sans-serif;
+        }
+        
+        .contenedor {
+            display: grid;
+            margin: 3rem;
+            gap: 2rem;
+            grid-template-areas: 
+            'daniel daniel jonathan kira'
+            'jeanette patrick patrick kira'
+            ;
+            grid-column: span 0.5;
+        }
+        
+        .carta  {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            border-radius: 0.5rem;
+            gap: 2rem;
+            padding: 3rem;
+            align-items: baseline;
+        }
+        
+        .daniel {
+            background-image: url(./images/bg-pattern-quotation.svg);
+            
+            background-repeat: no-repeat;
+            background-position: top right 10%;
+            background-size: 100px;
+            background-color: var(--morado);
+            height: 225px;
+            width: 550px;
+            color: var(--blanco);
+            grid-area: daniel;
+            
+        
+        }
+        
+        .jonathan {
+            background-repeat: no-repeat;
+            background-position: top right 80%;
+            background-size: 100px;
+            background-color: var(--azul-grisaseo);
+            grid-column: span 0.5;
+            height: 225px;
+            width: 275px;
+            color: var(--blanco);
+            grid-area: jonathan;
+            align-content: center;
+            align-items: center;
+            align-self: center;
+        }
+        
+        .kira {
+            background-repeat: no-repeat;
+            background-position: top right 80%;
+            background-size: 100px;
+            background-color: var(--blanco);
+            grid-column: span 0.5;   
+            color: var(--azul-grisaseo);
+            height: 577px;
+            width: 275px;
+            grid-area: kira;
+            align-content: center;
+            align-items: center;
+            align-self: center;
+            padding-top: 0;
+        }
+        
+        .jeanette {
+            background-repeat: no-repeat;
+            background-position: top right 80%;
+            background-size: 100px;
+            background-color: var(--blanco);
+            grid-column: span 0.5;   
+            color: var(--azul-grisaseo);
+            height: 225px;
+            width: 275px;
+            grid-area: jeanette;
+            align-content: center;
+            align-items: center;
+            align-self: center;
+            
+        }
+        
+        .patrick {
+            background-repeat: no-repeat;
+            background-position: top right 80%;
+            background-size: 100px;
+            background-color: var(--azul-negro);
+            grid-column: span 0.5;   
+            color: var(--blanco);
+            height: 225px;
+            width: 550px;
+            grid-area: patrick;
+          
+        }
+        .nombre{
+            justify-content: center;
+            align-items: center;
+            align-self: center;
+            padding-left: 1rem;
+        }
+        
+        .user  {
+            display: flex;
+            flex-direction: row;
+        }
+        
+        img {
+            border-radius: 3rem;
+            padding: 2px;
+        
+        }
+        
+        .imagen {
+            background-color: var(--azul-grisaseo);
+            border-radius: 3rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
 }
